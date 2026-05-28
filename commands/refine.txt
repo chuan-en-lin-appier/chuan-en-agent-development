@@ -1,0 +1,26 @@
+- @refine 
+    - parameters 
+        - output_dir
+            - same dir as the target_material
+        - topic 
+            - same file name as the target_material, not including the extention 
+        - target_material
+                - data ready 資訊的來源 
+                    - 確認一下, 預期會透過 PDS 去拿 data-ready 的資訊嗎? 
+                        - 如果是 PDS data-ready api 去拿, 目前的理解它好像還不能遍歷所有data point, 可能要先實作api這一段或是直接從PDS db裡面去拿？
+                - alert 
+                    - /root/.agent_development/plan/data_ready_dashboard/init_question_material.txt
+        - additioanl_concern
+            - the grafana part i am very unsure, please search for our existing use case and invertigate the feasibility for me
+    - do 
+        - i am going to discuss these topics in <material> with collegues, 
+            - but i have limited understanding of our system,
+            - please help 
+                - trace related codes under l1/
+                - verify my questions following verification steps, help me not look like an indiot 
+                    - for each statement i make, veriy its correctness 
+                        - also provide existing use case with code trace for my statement 
+                    - for each concept/keyword i mentioned, verify i didn't misuse it 
+                        - also explain this concept/keyword for me 
+                -  also address additional_concern
+            - output your response to a refine_question_<topic>.md 

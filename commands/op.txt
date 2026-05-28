@@ -1,0 +1,23 @@
+- @op
+    - parameters 
+        - workflow 
+            -  https://temporal-web-wisteria.ai.appier.info/namespaces/general/schedules/user_score_hourly_bid_data
+        - output_dir
+            - /root/.agent_development/deployment/hourly_data_user_score_to_mlp_orch/op/<topic>
+                - create if not exist 
+        - time_partition
+            - utc 6:00 today
+        - topic 
+            - hourly_data_user_score_to_mlp_orch
+        - note 
+            - be aware of the time parameter format 
+    - do 
+        - invertigate how to perform 
+            - trigger the <workflow> with target_datetime=time_partition
+                - read <note>
+            - after sccuceeded, export an op_note.md under output_dir, covering
+                - step_by_step commands to reproduce what you have done 
+                    - for complex logics, write a separaed script (preferably python script) and give commands how to execute it 
+                    - @uv-venv -p 3.12
+                - issues encountered and resolved  
+        

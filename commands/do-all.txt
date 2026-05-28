@@ -1,0 +1,30 @@
+        - @do-all
+            - parameters
+                - plan_doc
+                    - -p
+                        - default =  /root/.agent_development/plan/data_ready_dashboard/manual_config_poc.txt
+                - output_dir
+                    - /root/.agent_development/do/<project_name>
+                        - create if not existed 
+                - project_name 
+                    - same as the plan_doc dir name 
+                - other <topic> related vairiables
+                    - name yourself when used 
+            - do
+                - read plan_doc 
+                - @uv-venv -p 3.12 if needed 
+                - if phases are specified, do in the phase order, single phase otherwise
+                - for each phase 
+                    - if verification approach is not specified 
+                        - export a verification_<v_topic>.md under output_dir in advance 
+                            - how would you verify the result after implementation
+                                - could cover from locat test to dev test, unit test to end-to-end test
+                                - need to have step by step commands ans scripts for human to reproduce
+                    - address the concerns specified in plan_doc, preferrably before implementation. 
+                    - implement the plan, and do the verification
+                        - resolve any issues encountered
+                        - try to do it yourself, ask human only if neccessary
+                    - export an implementation_note_<i_topic>.md 
+                        - record
+                            - what did yous do 
+                            - issues encountered and the solution

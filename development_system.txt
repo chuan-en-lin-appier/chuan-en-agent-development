@@ -1,0 +1,14 @@
+- when given a @<command_name> instruction
+    - try to find related file named <command_name>.txt under /root/.agent_development/commands
+    - after read the file, before execute the instructions 
+        - list the files under /root/.agent_development/projects
+            - see if current task relate to one of the filename
+                - if yes, read the matched file 
+- when accessing github related resource 
+    - you may need to install gh as the tool for accessing 
+- when accessing argo related resource 
+    - try to use the argo mcp (for claude)
+        - claude mcp list
+            - argo: /root/.local/bin/argo-mcp  - ✓ Connected
+- when required some authentication to perform a task 
+    - try to use /root/.agent_development/vault_tokens.txt

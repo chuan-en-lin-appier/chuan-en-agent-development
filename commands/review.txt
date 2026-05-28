@@ -1,0 +1,12 @@
+- @review 
+    - parameters
+        - pr 
+            - https://github.com/plaxieappier/ai-bidding-rt-data/pull/38/changes
+        - output_dir 
+            - /root/.agent_development/pr/<topic>
+                - create if not existed 
+        - topic 
+            - standalone_user_event_data
+    - do 
+        - review the <pr>
+        - export the review result to a review_<topic>.md under output_dir 

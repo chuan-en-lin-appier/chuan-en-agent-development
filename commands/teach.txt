@@ -1,0 +1,7 @@
+- @teach
+    - teach important comcepts
+            - assume the reader only on-board for 1 month, and may not have touched related repo
+            - list keywords/concepts and explain it 
+            - list the important relationships between concepts 
+    - list important references 
+            - url, code, docs, PRs...

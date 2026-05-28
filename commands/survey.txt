@@ -1,0 +1,27 @@
+- @survey
+    - parameter 
+        - material 
+            - /root/.agent_development/discussion/coder.txt
+            - 
+        - output_dir 
+            - /root/.agent_development/discussion
+        - topic 
+            - same as the material file name without extension
+        - <current_concern>
+            - N/A
+
+    - do 
+        - given the <material>, which amy include some conext and don't know the whole picture 
+            - trace code and other available resources, to get enough context and whole picture
+            - generate a md named overview_<topic>.md 
+                - explain the project
+                - teach important comcepts
+                    - assume the reader only on-board for 1 month, and may not have touched related repo
+                    - list keywords/concepts and explain it 
+                    - list the important relationships between concepts 
+                - list important references 
+                    - url, code, docs, PRs...
+                - list the items to futher verify, including
+                    - requirement not clear enough
+                    - current system features that will affect the feasibility or effort
+                - address <current_concern>

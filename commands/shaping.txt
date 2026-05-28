@@ -1,0 +1,33 @@
+- @shaping
+    - parameter 
+        - material 
+            - /root/.agent_development/projects/data_ready_dashboard.txt
+        - output_dir 
+            - /root/.agent_development/plan/data_ready_dashboard
+        - topic 
+            - same as the material file name without extension
+        - current concern 
+            - what is streamlit 
+            - compare streamlit and grafana
+            - where is the related code base for above?
+            - where is the related code base for
+                - @yiyun.lin 之前有快速做過給 pm 用的 dashboard
+
+- do 
+    - given the <material>, which amy include vague requirments
+        - trace code and other available resources, to get enough context and whole picture
+        - generate a md named shaping_<topic>.md 
+            - explain the project
+            - teach important comcepts
+                - assume the reader only on-board for 1 month, and may not have touched related repo
+                - list keywords/concepts and explain it 
+                - list the important relationships between concepts 
+            - list important references 
+                - url, code, docs, PRs...
+            - propose the possible high level approche
+            - list the items to futher verify, including
+                - requirement not clear enough
+                - current system features that will affect the feasibility or effort
+            - address current concern 
+
+        

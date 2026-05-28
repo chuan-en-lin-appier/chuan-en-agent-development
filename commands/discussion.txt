@@ -1,0 +1,60 @@
+    - @discussion
+        - parameters
+            - question_doc
+                - -q
+                - default =  question_<partition>.txt, under same dir as the first doc in base_material, create if not exist 
+            - output_dir
+                - -o
+                - default = same dir as the first doc in base_material
+            - base_material
+                - -m
+                - should be give a directory, or some indication of what materials based on which we are discussing
+                - default
+                    - /root/.agent_development/do/data_ready_dashboard/implementation_note_phase2.md
+                    - repo code
+            - partition
+                - -p
+                - default
+                    - same as the file name (not including the extention) as the first doc in base_material  
+            - new_questions
+                - --new_questions (optional)
+            - sync_back
+                - --sync_back (optional)
+        - do
+            - read question_doc and assume
+                - if --new_questions is not given
+                    - all current questions are addresses, we only need to deal with new upcoming questions
+                - else
+                    - the content in questions.txt are new questions, please address them
+            - no need to read the overall dd_review.md for now
+            - let human ask questions such that
+                - questions are based on base_material
+                - human will write new questions in the question_doc
+                - you don't neeed to monitor or loop checking the question_doc your self, human will say question update so that you can check the question_doc
+                - don't modify the question doc
+                - if some chage proposal is provded,
+                    - response by
+                        - record the complete proposal
+                        - provide context to make it more robust
+                        - your review and feedback
+                    - no really did the code change for now
+                - if a new dd proposal is porived,
+                    - response by
+                        - make it a complete dd description
+                            - summary
+                            - decision
+                            - criteria to make decisions
+                            - context
+                                - if context is provided, refer to it
+            - everytime after answering human question, identify which partitions human asked about, update your reponse to the corresponding QA subsection in the cosrrreponding review doc named review_<partition>.md under output_dir
+                - if sync_back is specified, no need to update to review_<partition>.md, directly update the corresponding base_material
+                - if the review doc not existed yet, create it
+                - the purpose of using partition is to save future context and avoid a file to be to long, so
+                    - strictly follow the partition rule. file names with partial partition should not count as
+                    - if there are several partitions identified in the question, split your response into different partition files
+                - based on the questions, maintain a table for
+                    - @teach 
+            - you may provide instructive knowldge/context to fill the knowledge gap, by assuming the following background human knowledge
+                - roughly know concepts about argo workflows
+                - roughly know concepts about temporal
+                - not quite know the detail of user-score logic

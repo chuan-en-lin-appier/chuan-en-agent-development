@@ -1,0 +1,23 @@
+- @address_pr_review
+    - parameters 
+        - pr
+            - https://github.com/plaxieappier/ai-bidding-infra/pull/70
+        - target_reviewers
+            - yiyun-lin-appier
+        - output_dir
+            - /root/.agent_development/pr/hourly_data_user_score_mlp_orch
+                - create if not existed
+        - topic 
+            - temporal_task_namspace
+        - materials
+            - code base under l1/
+    - do 
+        - trace the <pr>, find the review comment by target_reviewers, also refering to <materials> to get context
+            - export a address_review_<topic>.md under output_dir
+                - split sections, one section for each reviewer in target_reviewers
+                    - interpret the review
+                    - provide code trace to explain
+                    - should we accept this comment or argue for it?
+                    - propose solution/response and list action items
+                        - for code change and commands to execute
+                            - list comprehensive code change and commands

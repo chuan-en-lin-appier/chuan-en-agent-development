@@ -1,0 +1,13 @@
+- @uv-venv 
+                        - parameters
+                            - python_version
+                                - -p 
+                            - venv_name 
+                                - -v 
+                        - do 
+                            - when executing any python-related command
+                                - always use/inside uv venv 
+                                    - install related tools if needed
+                                    - if python_version is given, use the uv venv for that python version 
+                                    - if venv_name is given, use that uv venv 
+                                    - create the uv venv if not existed

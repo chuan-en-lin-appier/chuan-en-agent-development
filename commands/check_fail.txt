@@ -1,0 +1,19 @@
+- @check_fail
+    - parameters 
+        - target_url
+            - https://argo-ai-bidding-wisteria.appier.us/workflows/ai-bidding-user-score/ai-bidding-user-score-user-data-hourly-data-1779162300?tab=workflow&nodeId=ai-bidding-user-score-user-data-hourly-data-1779162300-1206505846
+        - output_dir 
+            - /root/.agent_development/deployment/hourly_data_argo
+        - topic 
+            - hourly_data_argo
+        - other_materials
+            - l1/ai-bidding-user-score
+            - other repo under l1/
+    - do 
+        - access and check the fail on target_url
+            - try to access the log 
+        - export a check_report_<topic>.md
+            - interpret the log 
+            - identify the root cause 
+            - provide code trace to explain
+            - propose solution 

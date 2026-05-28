@@ -1,0 +1,22 @@
+- @check-deployment-fail
+    - parameters
+        - deployment 
+            - https://github.com/plaxieappier/ai-bidding-user-score/actions/runs/26017786574/job/76474700773
+        - pr 
+            - https://github.com/plaxieappier/ai-bidding-user-score/pull/957
+        - code 
+            - /l1/ai-bidding-user-score
+        - output_dir
+            - /root/.agent_development/deployment/<topic>
+        - topic 
+            - hourly_data_user_score_to_mlp_orch
+        - vault_token
+            - /root/.agent_development/vault_tokens.txt
+    - do 
+        - investigate the <deployment> and <pr> and trace code to find the fail root cause
+            - you may need to install gh to access github 
+        - export a report md under output_dir
+            - explain the root cause 
+            - provide code trace to illustrate 
+            - propose solution
+        - use vault_token if needed 
